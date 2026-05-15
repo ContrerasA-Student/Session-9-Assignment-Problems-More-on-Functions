@@ -1,0 +1,38 @@
+# Armando Contrereas 5/9/2026
+# ps9p1
+def NextMonthForecast(Month, Sales):
+    Month = Month.title()
+    if Month in ["January", "February", "March"]:
+        Rate = 0.10
+
+    elif Month in ["April", "May", "June"]:
+        Rate = 0.15
+
+    elif Month in ["July", "August", "September"]:
+        Rate = 0.20
+
+    elif Month in ["October", "November", "December"]:
+        Rate = 0.25
+
+    else:
+        Rate = 0
+
+    NextMonthSales = Sales * (1 + Rate)
+    return NextMonthSales
+answer = "yes"
+while answer.lower() == "yes":
+
+# Input
+    lname = input("Enter last name: ")
+    Month = input("Enter month (January–December): ")
+    Sales = float(input("Enter sales: "))
+
+ # Process
+    Forecast = NextMonthForecast(Month, Sales)
+
+# Output
+    print("\nLast Name:", lname)
+    print("Next Month Forecasted Sales: $", format(Forecast, ".2f"))
+
+   
+    answer = input("\nDo you want to continue? (Yes or No): ")
