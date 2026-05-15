@@ -1,0 +1,48 @@
+# Armando Contrereas 5/9/2026
+# ps9p3
+def FinalPriceFormula(MSRP, Make, Model, EV):
+
+   MakeANDModel = (Make + " " + Model).lower()
+
+   # Determine discount rate
+   if EV.upper() == "Y":
+       Disc = 0.30
+
+   elif MakeANDModel == "honda accord":
+       Disc = 0.10
+
+   elif MakeANDModel == "toyota rav4":
+       Disc = 0.15
+
+   else:
+       Disc = 0.05
+
+   FinalPrice = MSRP * (1 - Disc) * 1.07
+   return FinalPrice
+
+TotalMSRP = 0
+TotalFinalPrice = 0
+
+answer = "yes"
+while answer.lower() == "yes":
+
+# Input
+   Make = input("Enter car make: ")
+   Model = input("Enter car model: ")
+   EV = input("Electric vehicle? (Y or N): ")
+   MSRP = float(input("Enter MSRP: "))
+
+
+ # Process
+   FinalPrice = FinalPriceFormula(MSRP, Make, Model, EV)
+   TotalMSRP += MSRP
+   TotalFinalPrice += FinalPrice
+
+
+# Output
+   print("\nVehicle:", Make, Model)
+   print("Final Price: $", format(FinalPrice, ".2f"))
+   answer = input("\nDo you want to continue? (Yes or No):  ")
+
+print("\nTotal MSRP of All Vehicles: $", format(TotalMSRP, ".2f"))
+print("Total Final Sales Price: $", format(TotalFinalPrice, ".2f"))
