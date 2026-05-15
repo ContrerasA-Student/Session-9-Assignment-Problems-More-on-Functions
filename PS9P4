@@ -1,0 +1,36 @@
+# Armando Contrereas 5/9/2026
+# ps9p4
+def TicketPrice(Miles):
+
+    if Miles >= 30:
+        TPrice = 12
+
+    elif Miles >= 20:
+        Price = 10
+
+    elif Miles >= 10:
+        TPrice = 8
+
+    else:
+        TPrice = 5
+
+    return TPrice
+    
+TotalSum = 0
+
+answer = "yes"
+while answer.lower() == "yes":
+
+# Input
+    lname = input("Enter last name: ")
+    Miles = float(input("Enter miles from downtown Chicago: "))
+
+# Process
+    Price = TicketPrice(Miles)
+    TotalSum = TotalSum + Price
+ # Output
+    print("\nLast Name:", lname)
+    print("Ticket Price: $", format(Price, ".2f"))
+    answer = input("\nDo you want to continue? (Yes or No): ")
+    
+print("\nTotal Ticket Price (All Tickets): $", format(TotalSum, ".2f"))
