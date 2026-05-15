@@ -1,0 +1,23 @@
+# Armando Contrereas 5/9/2026
+# ps9p2
+def GalFormula(Length, Width, Height):
+
+    SQFT = (2 * Length * Width) + (2 * Length * Height) + (2 * Width * Height)
+    Gallons = SQFT / 50
+
+    return Gallons
+
+answer = "yes"
+while answer.lower() == "yes":
+
+# Input
+    Length = float(input("Enter length of room: "))
+    Width = float(input("Enter width of room: "))
+    Height = float(input("Enter height of room: "))
+
+ # Process
+    GalNeeded = GalFormula(Length, Width, Height)
+
+# Output
+    print("\nGallons of Paint Needed:", format(GalNeeded, ".2f"))
+    answer = input("\nDo you want to continue? (Yes or No): ")
