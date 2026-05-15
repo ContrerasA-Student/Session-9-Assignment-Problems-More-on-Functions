@@ -1,0 +1,48 @@
+# Armando Contrereas 5/9/2026
+# ps9p5
+def AssValFormula(County, MarketVal):
+    County = County.lower()
+
+    if County == "Cook":
+        Rate = 0.90
+
+    elif County == "Dupage":
+        Rate = 0.80
+
+    elif County == "Mchenry":
+        Rate = 0.75
+
+    elif County == "Kane":
+        Rate = 0.60
+
+    else:
+        Rate = 0.70
+    return MarketVal * Rate
+
+MarketVALUES = []
+AssessedValues = []
+
+answer = "yes"
+while answer.lower() == "yes":
+
+# Input
+    County = input("Enter county: ")
+    MarketVal = float(input("Enter market value of home: "))
+
+# Process
+    AssVal = AssValFormula(County, MarketVal)
+
+    MarketVALUES.append(MarketVal)
+    AssessedValues.append(AssVal)
+    answer = input("\nDo you want to continue? (Yes or No): ")
+
+# Output
+print("\nAll Market Values:")
+
+for value in MarketVALUES:
+    print("$", format(value, ".2f"))
+
+print("\nAll Assessed Values:")
+
+for value in AssessedValues:
+    print("$", format(value, ".2f"))
