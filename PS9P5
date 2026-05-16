@@ -26,8 +26,8 @@ answer = "yes"
 while answer.lower() == "yes":
 
 # Input
-    County = input("Enter county: ")
-    MarketVal = float(input("Enter market value of home: "))
+    County = input("Enter County: ")
+    MarketVal = float(input("Enter Market Value of Home: "))
 
 # Process
     AssVal = AssValFormula(County, MarketVal)
