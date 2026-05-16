@@ -23,8 +23,8 @@ answer = "yes"
 while answer.lower() == "yes":
 
 # Input
-    lname = input("Enter last name: ")
-    Month = input("Enter month (January–December): ")
+    lname = input("Enter Last Name: ")
+    Month = input("Enter Month (January–December): ")
     Sales = float(input("Enter sales: "))
 
  # Process
