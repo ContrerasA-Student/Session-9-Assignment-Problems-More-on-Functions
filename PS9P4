@@ -15,15 +15,15 @@ def TicketPrice(Miles):
         TPrice = 5
 
     return TPrice
-    
+
 TotalSum = 0
 
 answer = "yes"
 while answer.lower() == "yes":
 
 # Input
-    lname = input("Enter last name: ")
-    Miles = float(input("Enter miles from downtown Chicago: "))
+    lname = input("Enter Last Name: ")
+    Miles = float(input("Enter Miles from Downtown Chicago: "))
 
 # Process
     Price = TicketPrice(Miles)
@@ -32,5 +32,5 @@ while answer.lower() == "yes":
     print("\nLast Name:", lname)
     print("Ticket Price: $", format(Price, ".2f"))
     answer = input("\nDo you want to continue? (Yes or No): ")
-    
-print("\nTotal Ticket Price (All Tickets): $", format(TotalSum, ".2f"))
+
+print("\nTotal Ticket Price (ALL Tickets): $", format(TotalSum, ".2f"))
